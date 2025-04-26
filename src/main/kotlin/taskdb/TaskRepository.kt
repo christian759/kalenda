@@ -23,7 +23,7 @@ object TaskRepository {
         }
     }
 
-    fun getTasksByDone(dateString: String): List<Task> {
+    fun getTasksByDate(dateString: String): List<Task> {
         return transaction {
             TaskTable.selectAll()
                 .where { TaskTable.date eq dateString }
